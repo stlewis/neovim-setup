@@ -14,18 +14,8 @@ cmd [[
   augroup END
 ]]
 
-cmd [[
-  augroup pencil
-    autocmd!
-    autocmd FileType markdown, mkd call pencil#init({'wrap': 'soft'})
-    autocmd FileType markdown, mkd call JrnlSettings()
-    autocmd FileType text call pencil#init({'wrap': 'soft'})
-    autocmd FileType inform7 call pencil#init({'wrap': 'soft'})
-    autocmd FileType inform7 call IFSettings()
-  augroup END
-]] -- Pencil auto file type detection
-
-cmd [[ com! FormatJSON %!python -m json.tool ]] -- Format JSON strings
+cmd [[ command! JrnlSettings call JrnlSettings() ]]
+cmd [[ command! IFSettings call IFSettings() ]]
 
 cmd [[
   function JrnlSettings()
@@ -45,3 +35,17 @@ cmd [[
     hi htmlBold cterm=bold
   endfunction
 ]]
+
+cmd [[
+  augroup pencil
+    autocmd!
+    autocmd FileType markdown call pencil#init({'wrap': 'soft'})
+    autocmd FileType markdown call JrnlSettings()
+    autocmd FileType text call pencil#init({'wrap': 'soft'})
+    autocmd FileType inform7 call pencil#init({'wrap': 'soft'})
+    autocmd FileType inform7 call IFSettings()
+  augroup END
+]] -- Pencil auto file type detection
+
+cmd [[ com! FormatJSON %!python -m json.tool ]] -- Format JSON strings
+
