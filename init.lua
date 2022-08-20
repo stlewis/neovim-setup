@@ -16,6 +16,15 @@ require('lualine').setup{}
 require('nvim-autopairs').setup{}
 require('tabline').setup{}
 
+-- Distraction Free Writing Mode
+require('true-zen').setup{
+  modes = {
+    ataraxis = {
+      backdrop = 15,
+    }
+  }
+}
+
 -- [[ Treesitter ]]
 require('nvim-treesitter.configs').setup {
   ensure_installed = 'all',

@@ -62,7 +62,7 @@ fn = function(use)
   use "rafamadriz/friendly-snippets"
 
   -- [[ Prose Writing ]]
-  use "junegunn/goyo.vim"
+  use "Pocco81/true-zen.nvim"
   use "preservim/vim-pencil"
 end
 

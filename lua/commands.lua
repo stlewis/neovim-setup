@@ -19,11 +19,11 @@ cmd [[ command! IFSettings call IFSettings() ]]
 
 cmd [[
   function JrnlSettings()
+    :TZAtaraxis
     set ft=markdown
     set spell
     hi htmlItalic cterm=italic
     hi htmlBold cterm=bold
-    :Goyo
   endfunction
 ]]
 
