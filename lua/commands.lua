@@ -41,9 +41,13 @@ cmd [[
     autocmd!
     autocmd FileType markdown call pencil#init({'wrap': 'soft'})
     autocmd FileType markdown call JrnlSettings()
+    autocmd FileType jrnl call JrnlSettings()
     autocmd FileType text call pencil#init({'wrap': 'soft'})
     autocmd FileType inform7 call pencil#init({'wrap': 'soft'})
     autocmd FileType inform7 call IFSettings()
+
+    autocmd BufEnter,BufNew *.jrnl call pencil#init({'wrap': 'soft'})
+    autocmd BufEnter,BufNew *.jrnl call JrnlSettings()
   augroup END
 ]] -- Pencil auto file type detection
 
