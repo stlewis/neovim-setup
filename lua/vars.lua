@@ -1,13 +1,20 @@
 local g = vim.g
 local e = vim.api.nvim_exec
+local var = vim.api.nvim_set_var
 
 g.t_co = 256
 g.background = "dark"
 
+-- Don't let startify change the working directory
+--var('g:startify_change_to_dir', 0)
+e([[let g:startify_change_to_dir = 0]], true)
+
 -- Testing Ruby uses Dispatch
-e([[ let test#strategy = "dispatch" ]], true)
+e([[let test#strategy = 'dispatch']], true)
+
 
 -- Pencil Vars
+
 e([[
   let pencil#autoformat=1
   let g:pencil#textwidth=80
