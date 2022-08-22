@@ -4,8 +4,9 @@ local opts = { noremap = true, silent = true }
 -- Toggle nvim tree
 map('n', '<F2>', [[:NvimTreeToggle<CR>]], {})
 
--- Toggle Telescope (fuzzy finder)
+-- Telescope (fuzzy finder)
 map('n', '<leader>t', [[:Telescope find_files<CR>]], {})
+map('n', '<leader>g', [[:Telescope live_grep<CR>]], {})
 
 -- Better window navigation
 map('n', '<C-h>', '<C-w>h', opts)

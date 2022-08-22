@@ -19,6 +19,7 @@ fn = function(use)
   }
 
   use { 'kdheepak/tabline.nvim' }
+  use { 'qpkorr/vim-bufkill'}
 
   -- [[ Colorschemes ]]
   use { 'bluz71/vim-nightfly-guicolors' }

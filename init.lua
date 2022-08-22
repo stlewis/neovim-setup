@@ -25,6 +25,18 @@ require('true-zen').setup{
   }
 }
 
+-- Telescope configs
+local actions = require('telescope.actions')
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist
+      }
+    }
+  }
+}
+
 -- [[ Treesitter ]]
 require('nvim-treesitter.configs').setup {
   ensure_installed = 'all',
