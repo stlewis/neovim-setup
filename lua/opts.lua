@@ -49,3 +49,7 @@ opt.splitbelow = true -- Place new horizontal splits to the bottom
 opt.completeopt = { "menu", "menuone", "noselect" }
 opt.shortmess:append "c"
 
+-- VimDiff
+cmd([[ set diffopt+=internal,algorithm:patience ]])
+opt.readonly = false
+

@@ -38,7 +38,7 @@ fn = function(use)
   use { 'preservim/nerdcommenter' }
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
   use { 'terryma/vim-multiple-cursors'} -- multicursor
-  use { 'airblade/vim-gitgutter' } -- git change tracking
+  --use { 'airblade/vim-gitgutter' } -- git change tracking
   use { 'dense-analysis/ale'} -- Linting
   use { 'yegappan/mru' } -- MRU list
   use { 'stlewis/vim-inform7'} -- Inform7 Syntax highlighting
