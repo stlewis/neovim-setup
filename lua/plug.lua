@@ -22,7 +22,11 @@ fn = function(use)
   use { 'qpkorr/vim-bufkill'}
 
   -- [[ Colorschemes ]]
-  use { 'bluz71/vim-nightfly-guicolors' }
+  use { 'bluz71/vim-nightfly-guicolors' } -- nightfly
+  use { 'kyazdani42/blue-moon'} -- blue-moon
+  use { 'ellisonleao/gruvbox.nvim'} -- gruvbox
+  use { 'andersevenrud/nordic.nvim' } -- nordic
+  use { 'ishan9299/nvim-solarized-lua'} -- solarized
 
   -- [[ Development ]]
   use {
