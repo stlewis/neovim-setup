@@ -11,6 +11,10 @@ opt.wrap = false -- Don't wrap lines
 opt.concealcursor = 'n' -- Don't maintain conceal markers in insert mode
 opt.conceallevel = 3
 
+-- [ Code Folding ]
+opt.foldmethod = 'expr'
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- [Filetypes]
 opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'

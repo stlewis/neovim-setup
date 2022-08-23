@@ -1,19 +1,20 @@
 local cmd = vim.cmd
+local api = vim.api
 
 -- Clean up trailing whitespace on save
 cmd [[
   autocmd BufWritePre * :%s/\s\+$//e
 ]]
 
--- When in insert mode, show absolute line numbers instead of relative
-cmd [[
-  augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
-    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
-  augroup END
-]]
+api.nvim_create_autocmd({"BufReadPost", "FileReadPost", "BufEnter"}, { command = "normal zR"})
 
+-- When in insert mode, show absolute line numbers instead of relative
+api.nvim_create_augroup("numbertoggle", { clear = true })
+
+api.nvim_create_autocmd({"BufEnter", "FocusGained", "InsertLeave", "WinEnter"}, { group = "numbertoggle", command = "if  &nu | set rnu | endif"})
+api.nvim_create_autocmd({"BufLeave", "FocusLost", "InsertEnter", "WinLeave"}, { group = "numbertoggle", command = "if  &nu | set nornu | endif"})
+
+-- File type setting commands
 cmd [[ command! JrnlSettings call JrnlSettings() ]]
 cmd [[ command! IFSettings call IFSettings() ]]
 
