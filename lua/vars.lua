@@ -12,7 +12,6 @@ e([[let g:startify_change_to_dir = 0]], true)
 -- Testing Ruby uses Dispatch
 e([[let test#strategy = 'dispatch']], true)
 
-
 -- Pencil Vars
 
 e([[

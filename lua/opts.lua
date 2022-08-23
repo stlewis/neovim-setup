@@ -6,26 +6,28 @@ opt.number = true -- Show line numbers
 opt.relativenumber = true -- Show relative line numbers
 opt.scrolloff = 4 -- Min number of lines of context
 opt.signcolumn = "yes" -- Show the sign column
-opt.showtabline = 2
-opt.wrap = false
+opt.showtabline = 2 -- Always show the tabline
+opt.wrap = false -- Don't wrap lines
+opt.concealcursor = 'n' -- Don't maintain conceal markers in insert mode
+opt.conceallevel = 3
 
 -- [Filetypes]
 opt.encoding = 'utf8'
 opt.fileencoding = 'utf8'
 
 -- [[ File Handling ]]
-opt.backup = false
-opt.clipboard = 'unnamedplus'
-opt.swapfile = false
-opt.hidden = true
-opt.undofile = true
+opt.backup = false -- Don't create a backup file
+opt.clipboard = 'unnamedplus' -- Allow interoperability with system clipboard
+opt.swapfile = false -- Don't use a swapfile
+opt.hidden = true -- Allow unsaved buffers to be hidden
+opt.undofile = true -- Use an undo file for persistent undo
 
 -- [[Theme]]
 opt.syntax = 'on' -- Enable syntax highlighting
 opt.termguicolors = true -- If the terminal supports them, use GUI colors
-opt.visualbell = true
+opt.visualbell = true -- Show a visual indicator instead of an audible error bell
 
-cmd('colorscheme nightfly')
+cmd('colorscheme nightfly') -- Pick the colorscheme
 
 -- [[Search]]
 opt.ignorecase = true -- Ignore case in search

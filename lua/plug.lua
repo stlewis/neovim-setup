@@ -34,7 +34,6 @@ fn = function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use { 'Yggdroot/indentLine' } -- see indentation
   use { 'tpope/vim-fugitive' }  -- git integration
   use { 'junegunn/gv.vim' } -- commit history
   use { 'windwp/nvim-autopairs' } -- auto close brackets
