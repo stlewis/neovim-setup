@@ -20,7 +20,7 @@ require('tabline').setup{}
 require('true-zen').setup{
   modes = {
     ataraxis = {
-      backdrop = 15,
+      backdrop = 100,
     }
   }
 }
