@@ -34,8 +34,9 @@ map('v', '>', '>gv', {})
 map('v', '<', '<gv', {})
 
 -- Don't replace copy buffer with pasted over contents
-map('v', 'p', '', {})
+map('v', 'p', '"_dP', {})
 
 -- Test Runners
 map('n', '<leader>s', [[:wall<CR>:TestNearest<CR>]], opts)
 map('n', '<leader>S', [[:wall<CR>:TestFile<CR>]], opts)
+
