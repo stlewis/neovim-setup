@@ -18,6 +18,11 @@ e([[
   let g:pencil_terminal_italics = 1
 ]], true)
 
+-- ALE Fixers
+e([[
+  let g:ale_fixers = { 'ruby': ['rubocop'] }
+]], true)
+
 -- Update the packpath
 local packer_path = vim.fn.stdpath('config') .. '/site'
 vim.o.packpath = vim.o.packpath .. ',' .. packer_path
