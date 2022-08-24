@@ -49,3 +49,12 @@ require('nvim-treesitter.configs').setup {
   }
 }
 
+-- Startify
+vim.g.startify_lists = {
+  { type = 'dir', header = { '   MRU ' .. vim.fn.getcwd() .. ':' }  },
+  { type = 'files', header = { '   MRU' } },
+  { type = 'sessions', header = { '   Sessions' } },
+  { type = 'bookmarks', header = { '   Bookmarks' } },
+  { type = 'commands', header = { '   Commands' } }
+}
+
