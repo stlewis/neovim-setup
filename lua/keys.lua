@@ -41,3 +41,6 @@ map('v', 'p', '"_dP', {})
 map('n', '<leader>s', [[:wall<CR>:TestNearest<CR>]], opts)
 map('n', '<leader>S', [[:wall<CR>:TestFile<CR>]], opts)
 
+-- ALE Fix
+map('n', '<leader>f', [[:ALEFix<CR>]], opts)
+
