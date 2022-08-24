@@ -58,3 +58,8 @@ vim.g.startify_lists = {
   { type = 'commands', header = { '   Commands' } }
 }
 
+local has_eo = os.execute('command -v eomotd')
+
+if has_eo == 0 then
+  vim.g.startify_custom_header = "startify#pad(split(system('eomotd'), '\n'))"
+end
