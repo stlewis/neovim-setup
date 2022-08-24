@@ -27,6 +27,7 @@ map('n', 'gT', [[:TablineBufferPrevious<CR>]], opts)
 -- Minor tweaks
 map('n', ';', ':', opts) -- default to a colon when hitting ; in normal mode
 map('n', 'q:', ':q', { noremap = true }) -- Stop that stupid window from popping up.
+map('n', '/<CR>', ':let @/=""<CR>', { noremap = true })
 
 -- [[ Editor Tweaks ]]
 -- Make it possible to tab over blocks continuously
