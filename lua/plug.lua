@@ -27,6 +27,8 @@ fn = function(use)
   use { 'ellisonleao/gruvbox.nvim'} -- gruvbox
   use { 'andersevenrud/nordic.nvim' } -- nordic
   use { 'ishan9299/nvim-solarized-lua'} -- solarized
+  use { 'sainnhe/edge' } -- edge
+  use { 'sainnhe/sonokai' } -- sonokai
 
   -- [[ Development ]]
   use {
