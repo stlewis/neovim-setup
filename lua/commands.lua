@@ -6,8 +6,6 @@ cmd [[
   autocmd BufWritePre * :%s/\s\+$//e
 ]]
 
-api.nvim_create_autocmd({"BufReadPost", "FileReadPost", "BufEnter"}, { command = "normal zR"})
-
 -- When in insert mode, show absolute line numbers instead of relative
 api.nvim_create_augroup("numbertoggle", { clear = true })
 
