@@ -18,10 +18,10 @@ map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
 
 -- Let arrow keys do something useful
-map('n', '<Right>', [[:vertical resize -5<CR>]], {})
-map('n', '<Left>', [[:vertical resize +5<CR>]], {})
-map('n', '<Down>', [[:resize -5<CR>]], {})
-map('n', '<Up>', [[:resize +5<CR>]], {})
+map('n', '<Right>', [[:vertical resize +5<CR>]], {})
+map('n', '<Left>', [[:vertical resize -5<CR>]], {})
+map('n', '<Down>', [[:resize +5<CR>]], {})
+map('n', '<Up>', [[:resize -5<CR>]], {})
 
 -- Navigate Buffers
 map('n', 'gt', [[:TablineBufferNext<CR>]], opts)
