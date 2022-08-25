@@ -14,6 +14,7 @@ opt.conceallevel = 3
 -- [ Code Folding ]
 opt.foldmethod = 'expr'
 opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldlevelstart = 99999
 
 -- [Filetypes]
 opt.encoding = 'utf8'

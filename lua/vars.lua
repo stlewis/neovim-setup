@@ -9,7 +9,8 @@ g.background = "dark"
 e([[let g:startify_change_to_dir = 0]], true)
 
 -- Testing Ruby uses Dispatch
-e([[let test#strategy = 'dispatch']], true)
+e([[let test#strategy = 'neovim']], true)
+e([[let g:test#neovim#start_normal = 1]], true)
 
 -- Pencil Vars
 e([[
