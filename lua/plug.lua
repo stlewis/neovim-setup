@@ -40,6 +40,7 @@ fn = function(use)
   use { 'junegunn/gv.vim' } -- commit history
   use { 'windwp/nvim-autopairs' } -- auto close brackets
   use { 'tpope/vim-surround' } -- do things with surroundings
+  use { 'tpope/vim-repeat' } -- do things with the dot operator
   use { 'preservim/nerdcommenter' }
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
   use { 'terryma/vim-multiple-cursors'} -- multicursor
