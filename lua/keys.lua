@@ -4,6 +4,9 @@ local opts = { noremap = true, silent = true }
 -- Toggle nvim tree
 map('n', '<F2>', [[:NvimTreeToggle<CR>]], {})
 
+-- Nvim Terminal mode switch with escape
+map('t', '<Esc>', '<C-\\><C-n>', opts)
+
 -- Telescope (fuzzy finder)
 map('n', '<leader>t', [[:Telescope find_files<CR>]], {})
 map('n', '<leader>g', [[:Telescope live_grep<CR>]], {})
@@ -15,10 +18,10 @@ map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
 
 -- Let arrow keys do something useful
-map('n', '<Right>', [[:vertical resize +5<CR>]], {})
-map('n', '<Left>', [[:vertical resize -5<CR>]], {})
-map('n', '<Down>', [[:resize +5<CR>]], {})
-map('n', '<Up>', [[:resize -5<CR>]], {})
+map('n', '<Right>', [[:vertical resize -5<CR>]], {})
+map('n', '<Left>', [[:vertical resize +5<CR>]], {})
+map('n', '<Down>', [[:resize -5<CR>]], {})
+map('n', '<Up>', [[:resize +5<CR>]], {})
 
 -- Navigate Buffers
 map('n', 'gt', [[:TablineBufferNext<CR>]], opts)
