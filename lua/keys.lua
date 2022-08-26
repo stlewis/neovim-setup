@@ -6,6 +6,7 @@ map('n', '<F2>', [[:NvimTreeToggle<CR>]], {})
 
 -- Nvim Terminal mode switch with escape
 map('t', '<Esc>', '<C-\\><C-n>', opts)
+map('n', '<leader>q',  '[[:Tclose<CR>]]', opts)
 
 -- Telescope (fuzzy finder)
 map('n', '<leader>t', [[:Telescope find_files<CR>]], {})
@@ -41,8 +42,8 @@ map('v', '<', '<gv', {})
 map('v', 'p', '"_dP', {})
 
 -- Test Runners
-map('n', '<leader>s', [[:wall<CR>:TestNearest<CR>]], opts)
-map('n', '<leader>S', [[:wall<CR>:TestFile<CR>]], opts)
+map('n', '<leader>s', [[:wall<CR>:Tclear<CR>:TestNearest<CR>]], opts)
+map('n', '<leader>S', [[:wall<CR>:Tclear<CR>:TestFile<CR>]], opts)
 
 -- ALE Fix
 map('n', '<leader>f', [[:ALEFix<CR>]], opts)

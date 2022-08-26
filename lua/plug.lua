@@ -64,6 +64,9 @@ fn = function(use)
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'saadparwaiz1/cmp_luasnip' }
 
+  -- Terminal Stuff
+  use { 'kassio/neoterm' }
+
   -- snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
