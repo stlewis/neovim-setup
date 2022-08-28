@@ -9,6 +9,7 @@ require('keys') -- Keymaps
 require('plug') -- Plugins
 require('completion') -- Completion config
 require('commands') -- Autocmds
+require('thematic_themes') -- Theme definitions
 
 -- PLUGINS
 require('nvim-tree').setup{ view = { side = "right" } }

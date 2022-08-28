@@ -1,6 +1,5 @@
 local g = vim.g
 local e = vim.api.nvim_exec
-local var = vim.api.nvim_set_var
 
 g.t_co = 256
 g.background = "dark"
