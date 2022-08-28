@@ -12,6 +12,7 @@ fn = function(use)
   -- [[ Theme ]]
   use { 'mhinz/vim-startify' }
   use { 'DanilaMihailov/beacon.nvim' }
+  use "preservim/vim-thematic"
 
   use {
     'nvim-lualine/lualine.nvim',
@@ -29,6 +30,7 @@ fn = function(use)
   use { 'ishan9299/nvim-solarized-lua'} -- solarized
   use { 'sainnhe/edge' } -- edge
   use { 'sainnhe/sonokai' } -- sonokai
+  use { 'preservim/vim-colors-pencil' }
 
   -- [[ Development ]]
   use {
@@ -74,6 +76,11 @@ fn = function(use)
   -- [[ Prose Writing ]]
   use "Pocco81/true-zen.nvim"
   use "preservim/vim-pencil"
+  use "preservim/vim-litecorrect"
+  use {
+    'preservim/vim-textobj-sentence',
+    requires = { { 'kana/vim-textobj-user' } }
+  }
 end
 
 return require('packer').startup(fn, cfg)

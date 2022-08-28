@@ -19,10 +19,9 @@ cmd [[ command! IFSettings call IFSettings() ]]
 cmd [[
   function JrnlSettings()
     :TZAtaraxis
+    :Thematic prose
     set ft=markdown
     set spell
-    hi htmlItalic cterm=italic
-    hi htmlBold cterm=bold
   endfunction
 ]]
 
@@ -30,8 +29,6 @@ cmd [[
   function IFSettings()
     set ft=inform7
     set spell
-    hi htmlItalic cterm=htmlItalic
-    hi htmlBold cterm=bold
   endfunction
 ]]
 
@@ -39,7 +36,9 @@ cmd [[
   augroup pencil
     autocmd!
     autocmd FileType markdown call pencil#init({'wrap': 'soft'})
-    autocmd FileType markdown call JrnlSettings()
+                                   \ | call litecorrect#init()
+                                   \ | call textobj#sentence#init()
+                                   \ | call JrnlSettings()
     autocmd FileType jrnl call JrnlSettings()
     autocmd FileType text call pencil#init({'wrap': 'soft'})
     autocmd FileType inform7 call pencil#init({'wrap': 'soft'})
