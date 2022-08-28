@@ -37,6 +37,7 @@ fn = function(use)
   }
 
   use { 'tpope/vim-fugitive' }  -- git integration
+  use { 'tpope/vim-unimpaired' } -- handy bracket commands
   use { 'junegunn/gv.vim' } -- commit history
   use { 'windwp/nvim-autopairs' } -- auto close brackets
   use { 'tpope/vim-surround' } -- do things with surroundings
