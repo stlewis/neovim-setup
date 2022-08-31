@@ -37,6 +37,8 @@ fn = function(use)
     'nvim-telescope/telescope.nvim',  --fuzzy finder
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- Native sorter
+
 
   use { 'tpope/vim-fugitive' }  -- git integration
   use { 'tpope/vim-unimpaired' } -- handy bracket commands
