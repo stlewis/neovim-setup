@@ -20,7 +20,7 @@ require('nvim-autopairs').setup{}
 require('true-zen').setup{
   modes = {
     ataraxis = {
-      backdrop = 100,
+      backdrop = 0.75,
     }
   }
 }
