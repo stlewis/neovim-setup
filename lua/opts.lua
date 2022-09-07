@@ -10,6 +10,7 @@ opt.showtabline = 2 -- Always show the tabline
 opt.wrap = false -- Don't wrap lines
 opt.concealcursor = 'n' -- Don't maintain conceal markers in insert mode
 opt.conceallevel = 3
+opt.mouse = 'a'
 
 -- [ Code Folding ]
 opt.foldmethod = 'expr'

@@ -25,8 +25,8 @@ map('n', '<Down>', [[:resize +5<CR>]], {})
 map('n', '<Up>', [[:resize -5<CR>]], {})
 
 -- Navigate Buffers
-map('n', 'gt', [[:TablineBufferNext<CR>]], opts)
-map('n', 'gT', [[:TablineBufferPrevious<CR>]], opts)
+map('n', 'gt', [[:BufferNext<CR>]], opts)
+map('n', 'gT', [[:BufferPrevious<CR>]], opts)
 
 -- Minor tweaks
 map('n', ';', ':', opts) -- default to a colon when hitting ; in normal mode

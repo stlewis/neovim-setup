@@ -15,7 +15,6 @@ require('thematic_themes') -- Theme definitions
 require('nvim-tree').setup{ view = { side = "right" } }
 require('lualine').setup{}
 require('nvim-autopairs').setup{}
-require('tabline').setup{}
 
 -- Distraction Free Writing Mode
 require('true-zen').setup{

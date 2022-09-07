@@ -19,7 +19,10 @@ fn = function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use { 'kdheepak/tabline.nvim' }
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
   use { 'qpkorr/vim-bufkill'}
 
   -- [[ Colorschemes ]]
