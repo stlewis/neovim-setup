@@ -29,7 +29,7 @@ map('n', 'gt', [[:BufferNext<CR>]], opts)
 map('n', 'gT', [[:BufferPrevious<CR>]], opts)
 
 -- Minor tweaks
-map('n', ';', ':', opts) -- default to a colon when hitting ; in normal mode
+--map('n', ';', ':', opts) -- default to a colon when hitting ; in normal mode
 map('n', 'q:', ':q', { noremap = true }) -- Stop that stupid window from popping up.
 map('n', '/<CR>', ':let @/=""<CR>', { noremap = true })
 
