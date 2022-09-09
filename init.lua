@@ -1,4 +1,7 @@
-vim.g.mapleader = ","
+local map = vim.api.nvim_set_keymap
+
+map('n', '<Space>', '<Nop>', {})
+vim.g.mapleader = " "
 vim.g.localleader = "\\"
 
 -- IMPORTS
