@@ -4,7 +4,7 @@ e([[
   let g:thematic#themes = {
   \  'prose': {
   \             'colorscheme': 'pencil',
-  \             'background': 'light'
+  \             'background': 'dark'
   \           }
   \}
 ]], true)
