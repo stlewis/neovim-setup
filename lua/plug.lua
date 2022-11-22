@@ -34,6 +34,11 @@ fn = function(use)
   use { 'sainnhe/edge' } -- edge
   use { 'sainnhe/sonokai' } -- sonokai
   use { 'preservim/vim-colors-pencil' }
+  use { 'EdenEast/nightfox.nvim' }
+  use { 'ful1e5/onedark.nvim' }
+  use { 'lunarvim/Onedarker.nvim' }
+  use { 'Mofiqul/vscode.nvim' }
+
 
   -- [[ Development ]]
   use {
