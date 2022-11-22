@@ -44,7 +44,6 @@ require('telescope').setup{
 
 -- [[ Treesitter ]]
 require('nvim-treesitter.configs').setup {
-  ensure_installed = 'all',
   auto_install = true,
 
   highlight = {
