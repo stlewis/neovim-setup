@@ -61,6 +61,7 @@ fn = function(use)
   use { 'dense-analysis/ale'} -- Linting
   use { 'yegappan/mru' } -- MRU list
   use { 'stlewis/vim-inform7'} -- Inform7 Syntax highlighting
+  use { 'neoclide/vim-jsx-improve'}
 
   -- Rails/Ruby & Testing
   use { 'tpope/vim-dispatch' }
