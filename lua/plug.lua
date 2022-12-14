@@ -23,7 +23,6 @@ fn = function(use)
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
-  use { 'qpkorr/vim-bufkill'}
 
   -- [[ Colorschemes ]]
   use { 'bluz71/vim-nightfly-guicolors' } -- nightfly

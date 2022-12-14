@@ -23,9 +23,14 @@ e([[
   let g:pencil_terminal_italics = 1
 ]], true)
 
+-- ALE Linters
+e([[
+  let g:ale_linters = { 'typescript': ['prettier'], 'typescriptreact': ['prettier']}
+]], true)
 -- ALE Fixers
 e([[
-  let g:ale_fixers = { 'ruby': ['rubocop'] }
+  let g:ale_fixers = { 'ruby': ['rubocop'], 'typescript': ['prettier'], 'typescriptreact': ['prettier'] }
+  let g:ale_fix_on_save = 1
 ]], true)
 
 -- Update the packpath
