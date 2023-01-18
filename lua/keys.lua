@@ -6,7 +6,7 @@ map('n', '<F2>', [[:NvimTreeToggle<CR>]], {})
 
 -- Nvim Terminal mode switch with escape
 map('t', '<Esc>', '<C-\\><C-n>', opts)
-map('n', '<leader>q',  '[[:Tclose<CR>]]', opts)
+map('n', '<leader>q',  ':Tclose<CR>', opts)
 
 -- Telescope (fuzzy finder)
 map('n', '<leader>t', [[:Telescope find_files<CR>]], {})
