@@ -45,6 +45,7 @@ fn = function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- Native sorter
+  use { 'github/copilot.vim' }
 
 
   use { 'tpope/vim-fugitive' }  -- git integration
@@ -61,6 +62,7 @@ fn = function(use)
   use { 'yegappan/mru' } -- MRU list
   use { 'stlewis/vim-inform7'} -- Inform7 Syntax highlighting
   use { 'neoclide/vim-jsx-improve'}
+  use { 'slim-template/vim-slim' } -- Slim highlighting
 
   -- Rails/Ruby & Testing
   use { 'tpope/vim-dispatch' }

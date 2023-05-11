@@ -16,7 +16,15 @@ require('thematic_themes') -- Theme definitions
 
 -- PLUGINS
 require('nvim-tree').setup{ view = { side = "right", relativenumber = true } }
-require('lualine').setup{}
+require('lualine').setup{
+
+  sections = {
+    lualine_c = {
+      { 'filename',  path = 1}
+    }
+  }
+}
+
 require('nvim-autopairs').setup{}
 
 -- Distraction Free Writing Mode

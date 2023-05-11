@@ -49,6 +49,6 @@ cmd [[
   augroup END
 ]] -- Pencil auto file type detection
 
-cmd [[ com! FormatJSON %!python -m json.tool ]] -- Format JSON strings
+cmd [[ com! FormatJSON %!python3 -m json.tool ]] -- Format JSON strings
 cmd [[ com! BD :BufferClose ]]
 
