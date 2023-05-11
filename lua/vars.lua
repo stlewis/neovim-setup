@@ -33,6 +33,11 @@ e([[
   let g:ale_fix_on_save = 1
 ]], true)
 
+-- Github Copilot
+g.copilot_no_tab_map = true
+g.assume_mapped = true
+g.copilot_tab_fallback = ""
+
 -- Update the packpath
 local packer_path = vim.fn.stdpath('config') .. '/site'
 vim.o.packpath = vim.o.packpath .. ',' .. packer_path

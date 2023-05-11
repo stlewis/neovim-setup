@@ -47,3 +47,6 @@ map('n', '<leader>S', [[:wall<CR>:Tclear<CR>:TestFile<CR>]], opts)
 
 -- ALE Fix
 map('n', '<leader>f', [[:ALEFix<CR>]], opts)
+
+-- Copilot
+map('i', "<C-J>", "copilot#Accept(<CR>)", { silent = true, expr = true })
