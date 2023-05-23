@@ -45,7 +45,7 @@ fn = function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- Native sorter
-  use { 'github/copilot.vim' }
+  use { 'github/copilot.vim'}
 
 
   use { 'tpope/vim-fugitive' }  -- git integration
