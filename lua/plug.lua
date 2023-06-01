@@ -56,7 +56,7 @@ fn = function(use)
   use { 'tpope/vim-repeat' } -- do things with the dot operator
   use { 'preservim/nerdcommenter' }
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
-  use { 'terryma/vim-multiple-cursors'} -- multicursor
+  use { 'mg979/vim-visual-multi'} -- multicursor
   --use { 'airblade/vim-gitgutter' } -- git change tracking
   use { 'dense-analysis/ale'} -- Linting
   use { 'yegappan/mru' } -- MRU list
