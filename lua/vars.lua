@@ -31,7 +31,7 @@ e([[
 -- ALE Fixers
 e([[
   let g:ale_fixers = { 'ruby': ['rubocop'], 'typescript': ['prettier', 'eslint'], 'typescriptreact': ['prettier', 'eslint'] }
-  let g:ale_fix_on_save = 1
+  let g:ale_fix_on_save = 0
 ]], true)
 
 -- ALE Config

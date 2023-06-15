@@ -33,7 +33,7 @@ opt.syntax = 'on' -- Enable syntax highlighting
 opt.termguicolors = true -- If the terminal supports them, use GUI colors
 opt.visualbell = true -- Show a visual indicator instead of an audible error bell
 
-cmd('colorscheme onedark') -- Pick the colorscheme
+cmd('colorscheme solarized') -- Pick the colorscheme
 
 -- [[Search]]
 opt.ignorecase = true -- Ignore case in search
