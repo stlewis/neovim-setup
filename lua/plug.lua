@@ -19,10 +19,10 @@ fn = function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
+  --use {
+    --'romgrk/barbar.nvim',
+    --requires = {'kyazdani42/nvim-web-devicons'}
+  --}
 
   -- [[ Colorschemes ]]
   use { 'bluz71/vim-nightfly-guicolors' } -- nightfly
