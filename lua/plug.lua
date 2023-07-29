@@ -4,67 +4,72 @@ cfg = {
 
 fn = function(use)
   -- [[ Plugins Go Here ]]
+
+
+  -- [[ File/Buffer Handling ]]
+  use 'famiu/bufdelete.nvim' -- Delete buffers without closing windows
+  use { 'yegappan/mru' } -- MRU list
+
   use {
     'kyazdani42/nvim-tree.lua', -- Filesystem navigator
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
-  -- [[ Theme ]]
-  use { 'mhinz/vim-startify' }
-  use { 'DanilaMihailov/beacon.nvim' }
-  use "preservim/vim-thematic"
-
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-
-  --use {
-    --'romgrk/barbar.nvim',
-    --requires = {'kyazdani42/nvim-web-devicons'}
-  --}
-
-  -- [[ Colorschemes ]]
-  use { 'bluz71/vim-nightfly-guicolors' } -- nightfly
-  use { 'kyazdani42/blue-moon'} -- blue-moon
-  use { 'ellisonleao/gruvbox.nvim'} -- gruvbox
-  use { 'andersevenrud/nordic.nvim' } -- nordic
-  use { 'ishan9299/nvim-solarized-lua'} -- solarized
-  use { 'sainnhe/edge' } -- edge
-  use { 'sainnhe/sonokai' } -- sonokai
-  use { 'preservim/vim-colors-pencil' }
-  use { 'EdenEast/nightfox.nvim' }
-  use { 'ful1e5/onedark.nvim' }
-  use { 'lunarvim/Onedarker.nvim' }
-  use { 'Mofiqul/vscode.nvim' }
-
-
-  -- [[ Development ]]
   use {
     'nvim-telescope/telescope.nvim',  --fuzzy finder
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- Native sorter
-  use { 'github/copilot.vim'}
 
 
-  use { 'tpope/vim-fugitive' }  -- git integration
-  use { 'tpope/vim-unimpaired' } -- handy bracket commands
-  use { 'junegunn/gv.vim' } -- commit history
-  use { 'windwp/nvim-autopairs' } -- auto close brackets
-  use { 'tpope/vim-surround' } -- do things with surroundings
-  use { 'tpope/vim-repeat' } -- do things with the dot operator
-  use { 'preservim/nerdcommenter' }
+
+  -- [[ Theme ]]
+  use { 'mhinz/vim-startify' }
+  use { 'DanilaMihailov/beacon.nvim' } -- highlight cursor after moving
+  use "preservim/vim-thematic" -- bundle theme options
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  } -- status line hotness
+
+
+
+  -- [[ Colorschemes ]]
+  use { 'ishan9299/nvim-solarized-lua'}
+  use { 'preservim/vim-colors-pencil' } -- for prose writing
+  use { 'Mofiqul/vscode.nvim' }
+
+
+
+  -- [[ Syntax Highlighting/Folding etc. ]]
   use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
-  use { 'mg979/vim-visual-multi'} -- multicursor
-  --use { 'airblade/vim-gitgutter' } -- git change tracking
-  use { 'dense-analysis/ale'} -- Linting
-  use { 'yegappan/mru' } -- MRU list
   use { 'stlewis/vim-inform7'} -- Inform7 Syntax highlighting
   use { 'neoclide/vim-jsx-improve'}
   use { 'slim-template/vim-slim' } -- Slim highlighting
 
-  -- Rails/Ruby & Testing
+
+  -- [[ Source Control ]]
+  use { 'tpope/vim-fugitive' }  -- git integration
+  use { 'junegunn/gv.vim' } -- commit history
+  --use { 'airblade/vim-gitgutter' } -- git change tracking
+
+  -- [[ Bracket and surroundings handling ]]
+  use { 'tpope/vim-unimpaired' } -- handy bracket commands
+  use { 'windwp/nvim-autopairs' } -- auto close brackets
+  use { 'tpope/vim-surround' } -- do things with surroundings
+
+  -- [[ Editing ]]
+  use { 'tpope/vim-repeat' } -- do things with the dot operator
+  use { 'preservim/nerdcommenter' }
+  use { 'mg979/vim-visual-multi'} -- multicursor
+
+  -- [[ Analysis Linting and AI ]]
+  use { 'github/copilot.vim'} -- AI coding assistant
+  use { 'dense-analysis/ale'} -- Linting
+
+
+  -- [[ Rails/Ruby & Testing ]]
   use { 'tpope/vim-dispatch' }
   use { 'tpope/vim-rails' }
   use { 'vim-test/vim-test' }
@@ -78,18 +83,18 @@ fn = function(use)
   use { 'hrsh7th/cmp-nvim-lua'}
   use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'saadparwaiz1/cmp_luasnip' }
+  use "L3MON4D3/LuaSnip" -- snippet engine
+  use "rafamadriz/friendly-snippets" -- snippets collection
 
-  -- Terminal Stuff
+  -- [[ Built In Terminal ]]
   use { 'kassio/neoterm' }
 
-  -- snippets
-  use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"
 
   -- [[ Prose Writing ]]
   use "Pocco81/true-zen.nvim"
   use "preservim/vim-pencil"
   use "preservim/vim-litecorrect"
+
   use {
     'preservim/vim-textobj-sentence',
     requires = { { 'kana/vim-textobj-user' } }

@@ -50,5 +50,5 @@ cmd [[
 ]] -- Pencil auto file type detection
 
 cmd [[ com! FormatJSON %!python3 -m json.tool ]] -- Format JSON strings
-cmd [[ com! BD :BufferClose ]]
+cmd [[ com! BD :Bdelete ]]
 
