@@ -71,6 +71,9 @@ vim.g.startify_lists = {
 -- Commenter
 require('Comment').setup()
 
+-- Git Signs
+require('gitsigns').setup()
+
 local has_eo = os.execute('command -v eomotd')
 
 if has_eo == 0 then

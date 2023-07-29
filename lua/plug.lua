@@ -51,6 +51,7 @@ fn = function(use)
   -- [[ Source Control ]]
   use { 'tpope/vim-fugitive' }  -- git integration
   use { 'junegunn/gv.vim' } -- commit history
+  use { '/lewis6991/gitsigns.nvim' }
 
   -- [[ Bracket and surroundings handling ]]
   use { 'tpope/vim-unimpaired' } -- handy bracket commands
