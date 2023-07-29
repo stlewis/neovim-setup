@@ -1,7 +1,7 @@
 cfg = {
   package_root = vim.fn.stdpath('config') .. '/site/pack'
 }
-
+--
 fn = function(use)
   -- [[ Plugins Go Here ]]
 
@@ -59,7 +59,7 @@ fn = function(use)
 
   -- [[ Editing ]]
   use { 'tpope/vim-repeat' } -- do things with the dot operator
-  use { 'preservim/nerdcommenter' }
+  use { 'numToStr/Comment.nvim' }
   use { 'mg979/vim-visual-multi'} -- multicursor
 
   -- [[ Analysis Linting and AI ]]
