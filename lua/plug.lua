@@ -95,10 +95,6 @@ fn = function(use)
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" -- snippets collection
 
-  -- [[ Built In Terminal ]]
-  use { 'kassio/neoterm' }
-
-
   -- [[ Prose Writing ]]
   use "Pocco81/true-zen.nvim"
   use "preservim/vim-pencil"
