@@ -73,6 +73,17 @@ fn = function(use)
   use { 'tpope/vim-rails' }
   use { 'ngmy/vim-rubocop' }
 
+  use { 'nvim-neotest/neotest',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'antoinemadec/FixCursorHold.nvim',
+      'olimorris/neotest-rspec'
+    }
+  }
+
+
+
 
   -- [[ Completion ]]
   use { 'hrsh7th/nvim-cmp'}

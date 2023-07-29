@@ -52,3 +52,19 @@ cmd [[
 cmd [[ com! FormatJSON %!python3 -m json.tool ]] -- Format JSON strings
 cmd [[ com! BD :Bdelete ]]
 
+-- Test runners
+api.nvim_create_user_command("RunNearestSpec",
+  function()
+    require('neotest').run.run()
+    require('neotest').output_panel.open()
+  end,
+  {}
+)
+
+api.nvim_create_user_command("RunAllSpecsInFile",
+  function()
+    require('neotest').run.run(vim.fn.expand('%'))
+    require('neotest').output_panel.open()
+  end,
+  {}
+)

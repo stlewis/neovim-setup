@@ -7,10 +7,6 @@ g.background = "dark"
 -- Don't let startify change the working directory
 e([[let g:startify_change_to_dir = 0]], true)
 
--- Testing Ruby uses Dispatch
-e([[let test#strategy = 'neoterm']], true)
-e([[let g:test#neovim#start_normal = 1]], true)
-
 -- Neoterm settings
 e([[let g:neoterm_default_mod = 'botright']], true) -- neoterm in a vert split
 e([[let g:neoterm_autoscroll= 1]], true) -- Always scroll to the bottom of the neoterm window when opening or executing a command

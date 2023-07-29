@@ -43,8 +43,8 @@ map('v', '<', '<gv', {})
 map('v', 'p', '"_dP', {})
 
 -- Test Runners
-map('n', '<leader>s', [[:wall<CR>:Tclear<CR>:TestNearest<CR>]], opts)
-map('n', '<leader>S', [[:wall<CR>:Tclear<CR>:TestFile<CR>]], opts)
+map('n', '<leader>s', [[:wall<CR>:RunNearestSpec<CR>]], opts)
+map('n', '<leader>S', [[:wall<CR>:RunAllSpecsInFile<CR>]], opts)
 
 -- ALE Fix
 map('n', '<leader>f', [[:ALEFix<CR>]], opts)

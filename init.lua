@@ -74,6 +74,13 @@ require('Comment').setup()
 -- Git Signs
 require('gitsigns').setup()
 
+-- NeoTest
+require('neotest').setup({
+  adapters = {
+    require('neotest-rspec')
+  }
+})
+
 local has_eo = os.execute('command -v eomotd')
 
 if has_eo == 0 then
