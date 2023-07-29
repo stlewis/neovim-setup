@@ -5,7 +5,6 @@ cfg = {
 fn = function(use)
   -- [[ Plugins Go Here ]]
 
-
   -- [[ File/Buffer Handling ]]
   use 'famiu/bufdelete.nvim' -- Delete buffers without closing windows
   use { 'yegappan/mru' } -- MRU list
@@ -52,7 +51,6 @@ fn = function(use)
   -- [[ Source Control ]]
   use { 'tpope/vim-fugitive' }  -- git integration
   use { 'junegunn/gv.vim' } -- commit history
-  use { 'airblade/vim-gitgutter' } -- git change tracking
 
   -- [[ Bracket and surroundings handling ]]
   use { 'tpope/vim-unimpaired' } -- handy bracket commands

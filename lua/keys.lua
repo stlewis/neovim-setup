@@ -6,11 +6,12 @@ map('n', '<F2>', [[:NvimTreeToggle<CR>]], {})
 
 -- Nvim Terminal mode switch with escape
 map('t', '<Esc>', '<C-\\><C-n>', opts)
-map('n', '<leader>q',  ':Tclose<CR>', opts)
+map('n', '<leader>q',  ':Tclose<CR>', opts) -- close terminal with leader + q
 
 -- Telescope (fuzzy finder)
-map('n', '<leader>t', [[:Telescope find_files<CR>]], {})
-map('n', '<leader>g', [[:Telescope live_grep<CR>]], {})
+map('n', '<leader>t', [[:Telescope find_files<CR>]], {}) -- fuzzy find files
+map('n', '<leader>g', [[:Telescope live_grep<CR>]], {}) -- grep in files
+map('n', '<leader>b', [[:Telescope buffers<CR>]], {}) -- list open buffers
 
 -- Better window navigation
 map('n', '<C-h>', '<C-w>h', opts)
@@ -31,7 +32,7 @@ map('n', '<S-tab>', [[:bprev<CR>]], opts)
 -- Minor tweaks
 --map('n', ';', ':', opts) -- default to a colon when hitting ; in normal mode
 map('n', 'q:', ':q', { noremap = true }) -- Stop that stupid window from popping up.
-map('n', '/<CR>', ':let @/=""<CR>', { noremap = true })
+map('n', '/<CR>', ':let @/=""<CR>', { noremap = true }) -- clear search highlight
 
 -- [[ Editor Tweaks ]]
 -- Make it possible to tab over blocks continuously
