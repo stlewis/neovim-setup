@@ -71,7 +71,6 @@ fn = function(use)
   -- [[ Rails/Ruby & Testing ]]
   use { 'tpope/vim-dispatch' }
   use { 'tpope/vim-rails' }
-  use { 'vim-test/vim-test' }
   use { 'ngmy/vim-rubocop' }
 
 
