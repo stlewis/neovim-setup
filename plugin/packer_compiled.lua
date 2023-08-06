@@ -9,23 +9,26 @@ vim.api.nvim_command('packadd packer.nvim')
 
 local no_errors, error_msg = pcall(function()
 
-  local time
-  local profile_info
-  local should_profile = false
-  if should_profile then
-    local hrtime = vim.loop.hrtime
-    profile_info = {}
-    time = function(chunk, start)
-      if start then
-        profile_info[chunk] = hrtime()
-      else
-        profile_info[chunk] = (hrtime() - profile_info[chunk]) / 1e6
-      end
+_G._packer = _G._packer or {}
+_G._packer.inside_compile = true
+
+local time
+local profile_info
+local should_profile = false
+if should_profile then
+  local hrtime = vim.loop.hrtime
+  profile_info = {}
+  time = function(chunk, start)
+    if start then
+      profile_info[chunk] = hrtime()
+    else
+      profile_info[chunk] = (hrtime() - profile_info[chunk]) / 1e6
     end
-  else
-    time = function(chunk, start) end
   end
-  
+else
+  time = function(chunk, start) end
+end
+
 local function save_profiles(threshold)
   local sorted_times = {}
   for chunk_name, time_taken in pairs(profile_info) do
@@ -38,8 +41,10 @@ local function save_profiles(threshold)
       results[i] = elem[1] .. ' took ' .. elem[2] .. 'ms'
     end
   end
+  if threshold then
+    table.insert(results, '(Only showing plugins that took longer than ' .. threshold .. ' ms ' .. 'to load)')
+  end
 
-  _G._packer = _G._packer or {}
   _G._packer.profile_output = results
 end
 
@@ -69,35 +74,35 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["Onedarker.nvim"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/Onedarker.nvim",
-    url = "https://github.com/lunarvim/Onedarker.nvim"
   },
   ale = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/ale",
     url = "https://github.com/dense-analysis/ale"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["beacon.nvim"] = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/beacon.nvim",
     url = "https://github.com/DanilaMihailov/beacon.nvim"
   },
-  ["blue-moon"] = {
+  ["bufdelete.nvim"] = {
     loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/blue-moon",
-    url = "https://github.com/kyazdani42/blue-moon"
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
+    url = "https://github.com/famiu/bufdelete.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -129,20 +134,15 @@ _G.packer_plugins = {
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  edge = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/edge",
-    url = "https://github.com/sainnhe/edge"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox.nvim"] = {
+  ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com//lewis6991/gitsigns.nvim"
   },
   ["gv.vim"] = {
     loaded = true,
@@ -159,25 +159,15 @@ _G.packer_plugins = {
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/mru",
     url = "https://github.com/yegappan/mru"
   },
-  neoterm = {
+  neotest = {
     loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/neoterm",
-    url = "https://github.com/kassio/neoterm"
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
   },
-  nerdcommenter = {
+  ["neotest-rspec"] = {
     loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/nerdcommenter",
-    url = "https://github.com/preservim/nerdcommenter"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
-  },
-  ["nordic.nvim"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/nordic.nvim",
-    url = "https://github.com/andersevenrud/nordic.nvim"
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/neotest-rspec",
+    url = "https://github.com/olimorris/neotest-rspec"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -209,20 +199,10 @@ _G.packer_plugins = {
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/ful1e5/onedark.nvim"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  sonokai = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -269,16 +249,6 @@ _G.packer_plugins = {
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-litecorrect",
     url = "https://github.com/preservim/vim-litecorrect"
   },
-  ["vim-multiple-cursors"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors",
-    url = "https://github.com/terryma/vim-multiple-cursors"
-  },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
-  },
   ["vim-pencil"] = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-pencil",
@@ -314,11 +284,6 @@ _G.packer_plugins = {
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
-  ["vim-test"] = {
-    loaded = true,
-    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-test",
-    url = "https://github.com/vim-test/vim-test"
-  },
   ["vim-textobj-sentence"] = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-textobj-sentence",
@@ -339,6 +304,11 @@ _G.packer_plugins = {
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-unimpaired",
     url = "https://github.com/tpope/vim-unimpaired"
   },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
   ["vscode.nvim"] = {
     loaded = true,
     path = "/Users/stevelewis/.local/share/nvim/site/pack/packer/start/vscode.nvim",
@@ -347,6 +317,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+
+_G._packer.inside_compile = false
+if _G._packer.needs_bufread == true then
+  vim.cmd("doautocmd BufRead")
+end
+_G._packer.needs_bufread = false
+
 if should_profile then save_profiles() end
 
 end)
