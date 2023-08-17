@@ -8,6 +8,8 @@ map('n', '<F2>', [[:NvimTreeToggle<CR>]], {})
 map('n', '<leader>t', [[:Telescope find_files<CR>]], {}) -- fuzzy find files
 map('n', '<leader>g', [[:Telescope live_grep<CR>]], {}) -- grep in files
 map('n', '<leader>b', [[:Telescope buffers<CR>]], {}) -- list open buffers
+map('n', '<leader>m', [[:Telescope oldfiles<CR>]], {}) -- lists recently closed files
+
 
 -- Better window navigation
 map('n', '<C-h>', '<C-w>h', opts)

@@ -82,9 +82,6 @@ fn = function(use)
     }
   }
 
-
-
-
   -- [[ Completion ]]
   use { 'hrsh7th/nvim-cmp'}
   use { 'hrsh7th/cmp-buffer' }
