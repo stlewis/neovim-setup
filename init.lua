@@ -6,10 +6,10 @@ vim.g.localleader = "\\"
 
 -- IMPORTS
 
+require('plug') -- Plugins
 require('vars') -- Variables
 require('opts') -- Options
 require('keys') -- Keymaps
-require('plug') -- Plugins
 require('completion') -- Completion config
 require('commands') -- Autocmds
 require('thematic_themes') -- Theme definitions
