@@ -38,6 +38,7 @@ require('lazy').setup({
   'stlewis/vim-inform7',
   'neoclide/vim-jsx-improve',
   'slim-template/vim-slim',
+  'hashivim/vim-terraform',
 
   -- [[ Source Control ]]
   'tpope/vim-fugitive',

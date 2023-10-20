@@ -15,7 +15,7 @@ require('commands') -- Autocmds
 require('thematic_themes') -- Theme definitions
 
 -- PLUGINS
-require('nvim-tree').setup{ view = { side = "right", relativenumber = true } }
+require('nvim-tree').setup{ view = { side = "right", relativenumber = true,  width = 60 } }
 require('lualine').setup{
 
   sections = {
