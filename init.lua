@@ -81,6 +81,68 @@ require('neotest').setup({
   }
 })
 
+-- nvim-cmp
+local cmp = require('cmp')
+cmp.setup({
+  completion = {
+    completeopt = 'menu,menuone,preview,noselect'
+  },
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end
+  },
+
+  mapping = cmp.mapping.preset.insert({
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.close(),
+    ["<CR>"] = cmp.mapping.confirm({ select = true })
+  }),
+  sources = cmp.config.sources({
+    { name = 'buffer' },
+    { name = 'vsnip' },
+    { name = 'nvim_lsp' },
+    { name = 'path' }
+  })
+})
+
+-- LSP/Mason
+local mason = require('mason')
+local mason_lspconfig = require('mason-lspconfig')
+
+mason.setup(
+  {
+    ui = {
+      icons = {
+        package_installed = "",
+        package_pending = "",
+        package_uninstalled = ""
+      }
+    }  -- your mason setup
+  }
+)
+
+mason_lspconfig.setup({
+  ensure_installed = {
+    "html",
+    "graphql",
+    "jsonls",
+    "ruby_ls",
+    "rubocop",
+    "tsserver"
+  },
+  automatic_installation = true
+})
+
+local lspconfig = require('lspconfig')
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
+
+
+
 local has_eo = os.execute('command -v eomotd')
 
 if has_eo == 0 then

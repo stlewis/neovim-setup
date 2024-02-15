@@ -68,15 +68,19 @@ require('lazy').setup({
   'olimorris/neotest-rspec',
   'nvim-neotest/neotest',
 
+  -- LSP
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'neovim/nvim-lspconfig',
+
   -- [[ Code Completion ]]
-  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
-  'hrsh7th/cmp-nvim-lua',
-  'hrsh7th/cmp-nvim-lsp',
-  'saadparwaiz1/cmp_luasnip',
-  'L3MON4D3/LuaSnip', -- snippet engine
-  'rafamadriz/friendly-snippets', -- snippets collection
+  'hrsh7th/nvim-cmp',
+
+  'hrsh7th/cmp-vsnip',
+  'hrsh7th/vim-vsnip',
 
 -- [[ Prose Writing ]]
   'Pocco81/true-zen.nvim',
