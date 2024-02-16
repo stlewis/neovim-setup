@@ -52,11 +52,10 @@ require('telescope').setup{
 
 -- [[ Treesitter ]]
 require('nvim-treesitter.configs').setup {
-  auto_install = false,
-
-  highlight = {
-    enable = true
-  }
+  auto_install = true,
+  ensure_installed = { "lua", "ruby", "javascript", "typescript", "html", "css", "json", "graphql" },
+  highlight = { enable = true},
+  indent = { enable = true }
 }
 
 -- Startify
