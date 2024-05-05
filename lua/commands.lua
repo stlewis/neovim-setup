@@ -6,6 +6,9 @@ cmd [[
   autocmd BufWritePre * :%s/\s\+$//e
 ]]
 
+-- Fix weird ruby de-indentation
+cmd [[autocmd FileType ruby setlocal indentkeys-=.]]
+
 -- When in insert mode, show absolute line numbers instead of relative
 api.nvim_create_augroup("numbertoggle", { clear = true })
 

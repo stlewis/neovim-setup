@@ -29,8 +29,8 @@ require('lazy').setup({
   'nvim-lualine/lualine.nvim',
 
   -- [[ Colorschemes ]]
-  {'ishan9299/nvim-solarized-lua', lazy=false},
   'preservim/vim-colors-pencil',
+  'rafi/awesome-vim-colorschemes',
   'Mofiqul/vscode.nvim',
 
   -- [[ Syntax Highlighting/Folding etc. ]]
@@ -58,6 +58,12 @@ require('lazy').setup({
   -- [[ Analysis, Linting, and AI ]]
   'github/copilot.vim', -- AI Coding Assistant
   'dense-analysis/ale', -- Linting
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "canary",
+    dependencies = { { "github/copilot.vim" }, { "nvim-lua/plenary.nvim" } },
+    opts = { debug = true }
+  }, -- AI Chat Assistant
 
   -- [[ Ruby/Rails & Testing ]]
   'tpope/vim-dispatch',
@@ -66,6 +72,7 @@ require('lazy').setup({
 
   'antoinemadec/FixCursorHold.nvim',
   'olimorris/neotest-rspec',
+  "nvim-neotest/nvim-nio",
   'nvim-neotest/neotest',
 
   -- LSP
