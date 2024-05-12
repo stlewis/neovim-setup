@@ -32,6 +32,8 @@ require('lazy').setup({
   'preservim/vim-colors-pencil',
   'rafi/awesome-vim-colorschemes',
   'Mofiqul/vscode.nvim',
+  'xolox/vim-misc',
+  'xolox/vim-colorscheme-switcher',
 
   -- [[ Syntax Highlighting/Folding etc. ]]
   { 'nvim-treesitter/nvim-treesitter', build=':TSUpdate' },
