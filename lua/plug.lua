@@ -34,7 +34,7 @@ require('lazy').setup({
   'Mofiqul/vscode.nvim',
 
   -- [[ Syntax Highlighting/Folding etc. ]]
-  { 'nvim-treesitter/nvim-treesitter', build=':TsUpdate' },
+  { 'nvim-treesitter/nvim-treesitter', build=':TSUpdate' },
   'stlewis/vim-inform7',
   'neoclide/vim-jsx-improve',
   'slim-template/vim-slim',
