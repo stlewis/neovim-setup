@@ -130,7 +130,7 @@ mason_lspconfig.setup({
     "html",
     "graphql",
     "jsonls",
-    "ruby_ls",
+    "ruby_lsp",
     "rubocop",
     "tsserver"
   },

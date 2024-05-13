@@ -33,7 +33,10 @@ require('lazy').setup({
   'rafi/awesome-vim-colorschemes',
   'Mofiqul/vscode.nvim',
   'xolox/vim-misc',
-  'xolox/vim-colorscheme-switcher',
+  {
+    'xolox/vim-colorscheme-switcher',
+    dependencies = { 'xolox/vim-misc' }
+  },
 
   -- [[ Syntax Highlighting/Folding etc. ]]
   { 'nvim-treesitter/nvim-treesitter', build=':TSUpdate' },
