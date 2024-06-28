@@ -9,6 +9,9 @@ cmd [[
 -- Fix weird ruby de-indentation
 cmd [[autocmd FileType ruby setlocal indentkeys-=.]]
 
+-- Fix comment insertion when typing o
+cmd [[autocmd FileType * setlocal formatoptions-=o]]
+
 -- When in insert mode, show absolute line numbers instead of relative
 api.nvim_create_augroup("numbertoggle", { clear = true })
 

@@ -11,6 +11,7 @@ opt.wrap = false -- Don't wrap lines
 opt.concealcursor = 'n' -- Don't maintain conceal markers in insert mode
 opt.conceallevel = 3
 opt.mouse = 'a'
+opt.formatoptions:remove({ 'o' }) -- Don't insert comment leader on <Enter>
 
 -- [ Code Folding ]
 opt.foldmethod = 'expr'
