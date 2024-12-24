@@ -61,14 +61,7 @@ require('lazy').setup({
   'mg979/vim-visual-multi', -- multicursor
 
   -- [[ Analysis, Linting, and AI ]]
-  'github/copilot.vim', -- AI Coding Assistant
   'dense-analysis/ale', -- Linting
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
-    dependencies = { { "github/copilot.vim" }, { "nvim-lua/plenary.nvim" } },
-    opts = { debug = true }
-  }, -- AI Chat Assistant
 
   -- [[ Ruby/Rails & Testing ]]
   'tpope/vim-dispatch',

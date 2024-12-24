@@ -35,7 +35,7 @@ opt.syntax = 'on' -- Enable syntax highlighting
 opt.termguicolors = true -- If the terminal supports them, use GUI colors
 opt.visualbell = true -- Show a visual indicator instead of an audible error bell
 
-cmd('colorscheme deep-space') -- Pick the colorscheme
+cmd('colorscheme focuspoint') -- Pick the colorscheme
 
 -- [[Search]]
 opt.ignorecase = true -- Ignore case in search
