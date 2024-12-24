@@ -24,7 +24,6 @@ require('lazy').setup({
 
   -- [[ Theme ]]
   'mhinz/vim-startify',
-  'DanilaMihailov/beacon.nvim',
   'preservim/vim-thematic',
   'nvim-lualine/lualine.nvim',
 
@@ -62,6 +61,12 @@ require('lazy').setup({
 
   -- [[ Analysis, Linting, and AI ]]
   'dense-analysis/ale', -- Linting
+
+  -- [[ AI Coding Assistant]]
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
 
   -- [[ Ruby/Rails & Testing ]]
   'tpope/vim-dispatch',

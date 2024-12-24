@@ -21,7 +21,7 @@ opt.foldlevelstart = 99999
 
 -- [Filetypes]
 opt.encoding = 'utf8'
-opt.fileencoding = 'utf8'
+-- opt.fileencoding = 'utf8'
 
 -- [[ File Handling ]]
 opt.backup = false -- Don't create a backup file

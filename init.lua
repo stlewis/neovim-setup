@@ -132,7 +132,6 @@ mason_lspconfig.setup({
     "jsonls",
     "ruby_lsp",
     "rubocop",
-    "tsserver"
   },
   automatic_installation = true
 })
