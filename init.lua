@@ -127,6 +127,8 @@ mason.setup(
 
 mason_lspconfig.setup({
   ensure_installed = {
+    "eslint",
+    "ts_ls",
     "html",
     "graphql",
     "jsonls",
@@ -138,6 +140,9 @@ mason_lspconfig.setup({
 
 local lspconfig = require('lspconfig')
 local cmp_nvim_lsp = require('cmp_nvim_lsp')
+
+lspconfig.ts_ls.setup({})
+lspconfig.ruby_lsp.setup({})
 
 
 
